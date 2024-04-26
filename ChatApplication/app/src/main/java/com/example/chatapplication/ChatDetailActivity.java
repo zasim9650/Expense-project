@@ -74,7 +74,7 @@ public class ChatDetailActivity extends AppCompatActivity {
                         for(DataSnapshot dataSnapshot:snapshot.getChildren()){
 
                             MassageModel model=dataSnapshot.getValue(MassageModel.class);
-                            model.setMassage(dataSnapshot.getKey());
+                            model.setMassageId(dataSnapshot.getKey());
                             massageModels.add(model);
 
                         }

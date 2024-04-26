@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:orientation="vertical"
+
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.google.android.material.tabs.TabLayout
@@ -15,7 +16,7 @@ android:orientation="vertical"
         android:elevation="12dp"
         app:tabMaxWidth="0dp"
         app:tabGravity="fill"
-        android:background="#0C779E"
+        android:background="#1C8C7A"
         app:tabTextColor="@color/white"
         app:tabMode="fixed"
         android:layout_height="56dp">

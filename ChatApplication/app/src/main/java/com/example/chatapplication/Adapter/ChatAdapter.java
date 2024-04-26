@@ -24,7 +24,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
      Context context;
      String recId;
 
-    public ChatAdapter(ArrayList<MassageModel> massageModels, ChatDetailActivity chatDetailActivity, String recId) {
+    public ChatAdapter(ArrayList<MassageModel> massageModels, Context context, String recId) {
+        this.massageModels = massageModels;
+        this.context = context;
         this.recId = recId;
     }
 
@@ -73,10 +75,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
                      .setPositiveButton("yes", new DialogInterface.OnClickListener() {
                          @Override
                          public void onClick(DialogInterface dialog, int which) {
+
                              FirebaseDatabase database=FirebaseDatabase.getInstance();
-                             String senderId=FirebaseAuth.getInstance().getUid()+recId;
-                             database.getReference().child("CHATS").child(senderId)
-                                     .child(massageModel.getMassage())
+                             String senderRoom=FirebaseAuth.getInstance().getUid() + recId;
+                             database.getReference().child("CHATS").child(senderRoom)
+                                     .child(massageModel.getMassageId())
                                      .setValue(null);
 
                          }
@@ -86,7 +89,6 @@ public class ChatAdapter extends RecyclerView.Adapter {
                              dialog.dismiss();
                          }
                      }).show();
-
 
          }
      });

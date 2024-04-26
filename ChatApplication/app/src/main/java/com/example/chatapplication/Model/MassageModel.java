@@ -1,8 +1,20 @@
 package com.example.chatapplication.Model;
 
 public class MassageModel {
-    String uId,massage;
+    String uId,massage,massageId;
     Long timestamp;
+
+    public MassageModel(String massageId) {
+        this.massageId = massageId;
+    }
+
+    public String getMassageId() {
+        return massageId;
+    }
+
+    public void setMassageId(String massageId) {
+        this.massageId = massageId;
+    }
 
     public MassageModel(String uId, String massage, Long timestamp) {
         this.uId = uId;

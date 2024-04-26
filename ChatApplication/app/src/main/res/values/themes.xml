@@ -1,10 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ChatApplication" parent="Theme.Material3.DayNight">
+    <style name="Theme.ChatApplication"  parent="Theme.Material3.DayNight">
+
+<!--    <style name="Base.Theme.ChatApplication"  parent="Theme.Material3.DayNight">-->
+
         <!-- Customize your light theme here. -->
 
-        <item name="colorPrimary">#17633E</item>
+        <item name="colorPrimary">#1C8C7A</item>
+<!--        <item name="android:textColor">@color/ActionBarTitlColor</item>-->
+
+<!--        Start ActionBar Icon color...........................................................-->
+        <item name="actionOverflowButtonStyle">@style/IconOverflow</item>
+    </style>
+    <style name="IconOverflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
     </style>
 
-    <style name="Theme.ChatApplication" parent="Base.Theme.ChatApplication" />
+    <!--        End ActionBar Icon color...........................................................-->
+
+
+    <style name="ChatApplication" parent="Theme.ChatApplication" />
+
+
+
+
+
 </resources>

@@ -69,6 +69,16 @@ GoogleSignInClient gsc;
             @Override
             public void onClick(View view) {
 
+                if(binding.etSignInEmail.getText().toString().isEmpty()){
+                    binding.etSignInEmail.setError("Enter Your Email");
+                    return;
+                }
+                if(binding.etSignInPassword.getText().toString().isEmpty()){
+                    binding.etSignInPassword.setError("Enter your Password");
+                    return;
+                }
+
+
                 progressDialog.show();
                 auth.signInWithEmailAndPassword(binding.etSignInEmail.getText().toString(),binding.etSignInPassword.getText().toString())
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
