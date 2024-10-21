@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/list_view"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:hint="Enter your text"
+            android:id="@+id/edit_text"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:text="Urgent"
+            android:id="@+id/my_switch"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:text="add"
+            android:id="@+id/add_btn"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="0.5"
+           android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/button_shape"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
